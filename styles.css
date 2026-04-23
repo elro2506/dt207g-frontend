@@ -32,7 +32,7 @@ padding: 20px;
 .lista a {
     text-decoration: none;
     color: black;
-    
+    display: block; /*För att hela ytan ska vara klickbar*/
 }
 
 .lista:hover {
@@ -84,6 +84,16 @@ button {
     border-radius: 15px;
     padding: 10px;
     cursor: pointer;
+}
+
+.add-h1 {
+    margin-bottom: 20px;
+}
+
+input {
+    padding: 10px;
+    width: 400px;
+    margin-bottom: 20px;
 }
 
 footer {
