@@ -1,4 +1,4 @@
-const url = "http://localhost:5000/experience";
+const url = "https://experience-api-2lvv.onrender.com/";
 
 //POST-funktionen
 async function sendAPIRequest(data) {
