@@ -20,3 +20,5 @@ Frontend kommunicerar med REST API som är byggd i node.js och Express
 
 ## Körning av webbplatsen
 För att köra projektet lokalt behöver man starta backend-servern och öppna en html-fil i webbläsaren.
+
+Webbplatsen nås här: https://dt207g-labb2.netlify.app/
