@@ -2,28 +2,36 @@ const url = "http://localhost:5000/experience";
 
 function getData() {
     fetch(url)
-    .then(response => response.json())
-    .then(data => writeExperience(data))
-    .catch(err => console.log("Error" + err));
+        .then(response => response.json())
+        .then(data => writeExperience(data))
+        .catch(err => console.log("Error" + err));
 }
 
 //Skriver ut data
 function writeExperience(data) {
-    const list = document.getElementById("list");
-    list.innerHTML = "";
+    const tbody = document.querySelector("#list tbody");
+    tbody.innerHTML = "";
 
     data.forEach(item => {
-        const li = document.createElement("li");
+        const tr = document.createElement("tr");
 
-        li.textContent = item.company + " - " + item.jobtitle;
+        tr.innerHTML = `
+        <td>${item.company}</td>
+        <td>${item.jobtitle}</td>
+        <td>${item.location}</td>
+        <td>${item.startdate}</td>
+        <td>${item.enddate}</td>
+        <td>${item.description}</td>
+        <td><button>Radera</button></td>
+        `;
 
-        const button = document.createElement("button");
-        button.textContent = "Radera";
+        const button = tr.querySelector("button");
+
 
         button.onclick = () => deleteExperience(item.id);
-        
-        li.appendChild(button);
-        list.appendChild(li);
+
+        tbody.appendChild(tr);
+
     });
 }
 
@@ -31,8 +39,8 @@ function deleteExperience(id) {
     fetch(`${url}/${id}`, {
         method: "DELETE"
     })
-.then(() => getData())
-.catch(err => console.log("Error" + err));
+        .then(() => getData())
+        .catch(err => console.log("Error" + err));
 }
 
 async function sendApiRequest(data) {
