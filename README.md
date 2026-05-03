@@ -1,4 +1,6 @@
-# DT207G - Laboration 2
+# DT207G - Laboration 3
+
+På denna webbplats använder jag mig av node.js, Express och MongoDB då jag kopplar detta till min backend-uppgift.
 
 ## Funktionalitet
 På min webbplats kan man:
@@ -10,15 +12,16 @@ På min webbplats kan man:
 - HTML
 - CSS
 - JavaScript
-- JSON
 
-## Struktur
-Min webbplats har tre sidor: index.html, about.html och add.html
+## Startsida
 
-## API
-Frontend kommunicerar med REST API som är byggd i node.js och Express
+## Lägg till arbetslivserfarenhet
 
-## Körning av webbplatsen
-För att köra projektet lokalt behöver man starta backend-servern och öppna en html-fil i webbläsaren.
+## Om-sidan
 
-Webbplatsen nås här: https://dt207g-labb2.netlify.app/
+## Backend
+Mitt backend nås här: https://dt207g-labb3.onrender.com/experience 
+
+
+## Webbplatsen
+Webbplatsen nås här: https://dt207g-labb3.netlify.app/
